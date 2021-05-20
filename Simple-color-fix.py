@@ -4,13 +4,13 @@ input  = Image.open('input.png')
 input_pixels  = input.load()
 width, height = input.size
 
-coefficient = 1.7
+RBG = 1.7
 
 def rescale(t,min,max):
 	assert len(t)==len(min)==len(max)
 	out = []
 	for i in range(len(t)):
-		out.append(int(((t[i]-min[i])/max[i])*255*coefficient))
+		out.append(int(((t[i]-min[i])/max[i])*255*RBG))
 	if len(t)==4:
 		out[-1]=255
 	out =  tuple(out)
