@@ -7,23 +7,12 @@ width, height = input.size
 RBG = 1
 
 def rescale(t,min,max):
-	assert len(t)==len(min)==len(max)
+	assert len(t) == len(min) == len(max)
 	out = []
 	for i in range(len(t)):
-		out.append(int(((t[i]-min[i])/(max[i]-min[i]))*255*RBG))
+		out.append (int( ( (t[i]-min[i]) / (max[i]-min[i]) ) * 255 * RBG) )
 	if len(t)==4:
 		out[-1]=255
-	out =  tuple(out)
-	return out
-
-def minus(t1,t2):
-	assert len(t1)==len(t2)
-	out = []
-	for i in range(len(t1)):
-		color = t1[i]-t2[i]
-		out.append(color)
-	if len(t1)==4:
-		out[3]=255
 	out =  tuple(out)
 	return out
 
@@ -41,6 +30,6 @@ min_input, max_input = get_borders(input)
 for x in range(width):
 	for y in range(height):
 		pixel = input_pixels[x,y]
-		pixel = rescale(pixel,min_input,max_input)
-		input_pixels[x,y]=pixel
+		pixel = rescale (pixel, min_input, max_input)
+		input_pixels[x,y] = pixel
 input.show()
