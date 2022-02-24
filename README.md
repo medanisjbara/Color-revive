@@ -9,10 +9,12 @@ Note that if the changes are null or way too little, the script won't be able to
 
 ## Installation
 ```
-git clone https://github.com/medanisjbara/Color-adjustment
-install Color-adjustment/colrev.py $HOME/.local/bin/colrev
+git clone https://github.com/medanisjbara/Color-revive
+install Color-revive/colrev.py $HOME/.local/bin/colrev
 ```
 
 ## Usage
 Type `colrev -h` for help.
-use `colrev <image-name>` to execute the script on a certain image. where `<image-name>` is the name of the image.
+use `colrev <image-name>` to execute the script on a certain image.
+
+where `<image-name>` is the name of the image.
